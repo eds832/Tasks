@@ -27,7 +27,7 @@ public class DivideTask {
 		while (b * i <= a) {
 			i++;
 		}
-		return (i - 1) * (sign == true ? -1 : 1);
+		return (i - 1) * (sign ? -1 : 1);
 	}
 
 }
