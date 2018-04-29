@@ -11,7 +11,7 @@ public class DivideTask {
 		System.out.println((Integer.MIN_VALUE + 1) + " / -1 = " + divide((Integer.MIN_VALUE + 1), -1) + " == " + (Integer.MIN_VALUE + 1) / -1);
 		System.out.println(Integer.MIN_VALUE + " / 1 = " + divide(Integer.MIN_VALUE, 1) + " == " + Integer.MIN_VALUE / 1);
 		System.out.println(Integer.MIN_VALUE + " / -1 = " + divide(Integer.MIN_VALUE, -1) + " == " + Integer.MIN_VALUE / -1);
-		System.out.println("10 / 0 = " + divide(10, 0));
+		System.out.print("10 / 0 = ");System.out.print(divide(10, 0));
 	}
 
 	static int divide(int a, int b) {
