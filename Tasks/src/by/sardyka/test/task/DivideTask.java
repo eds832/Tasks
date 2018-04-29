@@ -1,7 +1,7 @@
 package by.sardyka.test.task;
 
 public class DivideTask {
-	public static void main(String[] arg) {
+	public static void main(String[] arg) throws InterruptedException {
 		System.out.println("10 / 3 = " + divide(10, 3) + " == " + 10 / 3);
 		System.out.println("-10 / 3 = " + divide(-10, 3) + " == " + (-10 / 3));
 		System.out.println("10 / -3 = " + divide(10, -3) + " == " + 10 / -3);
@@ -11,6 +11,7 @@ public class DivideTask {
 		System.out.println((Integer.MIN_VALUE + 1) + " / -1 = " + divide((Integer.MIN_VALUE + 1), -1) + " == " + (Integer.MIN_VALUE + 1) / -1);
 		System.out.println(Integer.MIN_VALUE + " / 1 = " + divide(Integer.MIN_VALUE, 1) + " == " + Integer.MIN_VALUE / 1);
 		System.out.println(Integer.MIN_VALUE + " / -1 = " + divide(Integer.MIN_VALUE, -1) + " == " + Integer.MIN_VALUE / -1);
+		Thread.sleep(10);
 		System.out.print("10 / 0 = ");System.out.print(divide(10, 0));
 	}
 
