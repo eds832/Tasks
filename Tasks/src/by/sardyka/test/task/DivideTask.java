@@ -11,6 +11,7 @@ public class DivideTask {
 		System.out.println((Integer.MIN_VALUE + 1) + " / -1 = " + divide((Integer.MIN_VALUE + 1), -1) + " == " + (Integer.MIN_VALUE + 1) / -1);
 		System.out.println(Integer.MIN_VALUE + " / 1 = " + divide(Integer.MIN_VALUE, 1) + " == " + Integer.MIN_VALUE / 1);
 		System.out.println(Integer.MIN_VALUE + " / -1 = " + divide(Integer.MIN_VALUE, -1) + " == " + Integer.MIN_VALUE / -1);
+		System.out.println(Integer.MAX_VALUE + " / -4 = " + divide(Integer.MAX_VALUE, -4) + " == " + Integer.MAX_VALUE / -4);
 		Thread.sleep(10);
 		System.out.print("10 / 0 = ");System.out.print(divide(10, 0));
 	}
@@ -19,7 +20,7 @@ public class DivideTask {
 		if (b == 0) {
 			throw new IllegalArgumentException("b = 0");
 		}
-		int i = 1;
+		long i = 1;
 		boolean sign = false;
 		if (b < 0) {
 			sign = true;
@@ -43,7 +44,8 @@ public class DivideTask {
 		while (b * i <= a) {
 			i++;
 		}
-		return (i - 1) * (sign ? -1 : 1);
+		int result = (int)(i - 1) * (sign ? -1 : 1);
+		return result;
 	}
 
 }
