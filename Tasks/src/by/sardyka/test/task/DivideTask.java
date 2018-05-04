@@ -28,7 +28,7 @@ public class DivideTask {
 
 	static int divide(int a, int b) {
 		if (b == 0) {
-			throw new IllegalArgumentException("b = 0");
+			throw new ArithmeticException("by zero");
 		}
 		long i = 1;
 		long aValue = a;
