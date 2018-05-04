@@ -23,8 +23,7 @@ public class DivideTask {
 		System.out.println(Integer.MAX_VALUE +" / " + Integer.MAX_VALUE + " = " + divide(Integer.MAX_VALUE, Integer.MAX_VALUE) + " == " + Integer.MAX_VALUE/ Integer.MAX_VALUE);
 		System.out.println("-1 / " + Integer.MIN_VALUE + " = " + divide(-1, Integer.MIN_VALUE) + " == " + (-1)/ Integer.MIN_VALUE);
 		System.out.println("-1 / " + Integer.MAX_VALUE + " = " + divide(-1, Integer.MAX_VALUE) + " == " + (-1)/ Integer.MAX_VALUE);
-		Thread.sleep(20);
-		System.out.print("10 / 0 = ");System.out.print(divide(10, 0));
+		System.out.print("10 / 0 = ");Thread.sleep(20);System.out.print(divide(10, 0));
 	}
 
 	static int divide(int a, int b) {
