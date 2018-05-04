@@ -12,6 +12,13 @@ public class DivideTask {
 		System.out.println(Integer.MIN_VALUE + " / 1 = " + divide(Integer.MIN_VALUE, 1) + " == " + Integer.MIN_VALUE / 1);
 		System.out.println(Integer.MIN_VALUE + " / -1 = " + divide(Integer.MIN_VALUE, -1) + " == " + Integer.MIN_VALUE / -1);
 		System.out.println(Integer.MAX_VALUE + " / -4 = " + divide(Integer.MAX_VALUE, -4) + " == " + Integer.MAX_VALUE / -4);
+		System.out.println("1 / " + Integer.MIN_VALUE + " = " + divide(1, Integer.MIN_VALUE) + " == " + 1 / Integer.MIN_VALUE);
+		System.out.println("1 / " + Integer.MAX_VALUE + " = " + divide(1, Integer.MAX_VALUE) + " == " + 1 / Integer.MAX_VALUE);
+		System.out.println(Integer.MIN_VALUE +" /" + Integer.MIN_VALUE + " = " + divide(Integer.MIN_VALUE, Integer.MIN_VALUE) + " == " + Integer.MIN_VALUE/ Integer.MIN_VALUE);
+		System.out.println(Integer.MIN_VALUE +" /" + Integer.MAX_VALUE + " = " + divide(Integer.MIN_VALUE, Integer.MAX_VALUE) + " == " + Integer.MIN_VALUE/ Integer.MAX_VALUE);
+		System.out.println(Integer.MAX_VALUE +" /" + Integer.MIN_VALUE + " = " + divide(Integer.MAX_VALUE, Integer.MIN_VALUE) + " == " + Integer.MAX_VALUE/ Integer.MIN_VALUE);
+		System.out.println(Integer.MAX_VALUE +" /" + Integer.MAX_VALUE + " = " + divide(Integer.MAX_VALUE, Integer.MAX_VALUE) + " == " + Integer.MAX_VALUE/ Integer.MAX_VALUE);
+		System.out.println("-1 /" + Integer.MIN_VALUE + " = " + divide(-1, Integer.MIN_VALUE) + " == " + (-1)/ Integer.MIN_VALUE);
 		Thread.sleep(10);
 		System.out.print("10 / 0 = ");System.out.print(divide(10, 0));
 	}
@@ -22,6 +29,14 @@ public class DivideTask {
 		}
 		long i = 1;
 		boolean sign = false;
+		if(a == Integer.MIN_VALUE) {
+			if(b == Integer.MIN_VALUE) {
+				return 1;
+			}
+			if(b == Integer.MAX_VALUE) {
+				return -1;
+			}
+		}
 		if (b < 0) {
 			sign = true;
 			b = -b;
@@ -30,11 +45,8 @@ public class DivideTask {
 			if(a == Integer.MAX_VALUE) {
 				return a * (sign ? -1 : 1);
 			}
-			if(a == Integer.MIN_VALUE + 1) {
+			if(a <= Integer.MIN_VALUE + 1) {
 				return a * (sign ? -1 : 1);
-			}
-			if(a == Integer.MIN_VALUE) {
-				return a;
 			}
 		}
 		if (a < 0) {
